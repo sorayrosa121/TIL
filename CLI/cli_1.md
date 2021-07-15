@@ -128,62 +128,13 @@
 
 
 
-### Repository?
-
-> 폴더 내 `.git` 디렉토리 (숨긴 항목)
-
-
-
 ## Vi 에디터
+
+- bash 내 vi 로 진입
+- vi a.txt로 파일 작성 가능
 
 > 편집모드 (i)
 
 > 일반모드(esc)
 
 > 저장 후 나가기(:wq) 
-
-
-
-## Git
-
-git status
-
-git log
-
-git reflog
-
-git checkout "git log 내역으로 확인한 돌아가고싶은 지점 문자열 일부"
-
-
-
-## 새 Repository 생성 후
-
-> git remote add origin https://github.com/sorayrosa121/TIL-test.git
-
-> git remote -v
-
-
-
-
-
-### 문제
-
-```
-$ git push
-fatal: You are not currently on a branch.
-To push the history leading to the current (detached HEAD)
-state now, use
-
-git push origin HEAD:<name-of-remote-branch>
-```
-
-
-
-`git checkout master`
-
-```
-git remote add origin https://github.com/sorayrosa121/TIL-test.git
-git branch -M main
-git push -u origin main
-```
-
