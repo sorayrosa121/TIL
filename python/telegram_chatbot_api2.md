@@ -88,7 +88,7 @@
 
 
 
-3.  getUpdates로 chat_id 가져오기
+3. getUpdates로 chat_id 가져오기
 
     
 
@@ -98,6 +98,8 @@
    
    response = requests.get(updates_url).json() # getUpdates에서 얻은 값을 json으로 response에 저장
    ```
+
+   
 
    
 
@@ -132,12 +134,16 @@
 
 6.  sendMessage로 text 메시지 보내기
 
+    
+   
    ```python
    # message_url = "https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}"
    message_url = f"{app_url}/sendMessage?chat_id={chat_id}&text={text}"
    
    requests.get(message_url)
    ```
-
+   
+   
+   
    
 

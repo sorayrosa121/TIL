@@ -106,7 +106,7 @@ name = 'rosa'
 url = f'https://api.agify.io?name={name}'
 ```
 
-##### 
+ 
 
 ##### JSON 타입
 
