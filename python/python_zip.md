@@ -30,7 +30,7 @@ print(list(zip(girls, boys)))
 
 ### Q2) zip(set_a, set_b)의 묶이는 순서
 
-### set는 순서가 없으므로 zip(a, b)의 출력 결과에서도 순서없이 묶이는 것을 확인
+#### set는 순서가 없으므로 zip(a, b)의 출력 결과에서도 순서없이 묶이는 것을 확인
 
 ```python
 a = {2, 7, 3}
