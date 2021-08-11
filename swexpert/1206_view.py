@@ -12,10 +12,22 @@ for tc in range(1, T+1):
         right_two = buildings[i] - buildings[i+2] # 오른쪽으로 2칸 ~
         right_one = buildings[i] - buildings[i+1] # 오른쪽으로 1칸 ~
 
-        if left_two > 0 and left_one > 0 and right_two > 0 and right_one > 0: # 양 옆 두 칸 거리 이내 빌딩이 현 빌딩 높이보다 다 낮은 경우
-            min_gap = min(left_two, left_one, right_two, right_one) # 최대로 확보된 조망권 확보 세대
+        temp = []
+        temp.append(left_two)
+        temp.append(left_one)
+        temp.append(right_two)
+        temp.append(right_one)
+        
+        cnt = 0
+        min_gap = temp[0]
+
+        for x in temp:
+            if x > 0:
+                cnt += 1
+                if min_gap > x: # 최대로 확보된 조망권 확보 세대
+                    min_gap = x
+        
+        if cnt == 4: # 양 옆 두 칸 거리 이내 빌딩이 현 빌딩 높이보다 다 낮은 경우
             answer += min_gap
-        else:
-            continue
-    
+
     print(f'#{tc} {answer}')
