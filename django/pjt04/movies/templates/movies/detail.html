@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">DETAIL</h1>
+
+<br>
+<hr>
+  <h3>{{ movie.title }}</h3>
+  <p>Overview: {{ movie.overview }}</p>
+  <p>Poster_path: {{ movie.poster_path }}</p>
+  <p>생성일자: {{ movie.created_at }}</p>
+  <p>수정일자: {{ movie.updated_at }}</p>
+
+  <a href="{% url 'movies:edit' movie.pk %}" class="btn btn-primary">EDIT</a>
+  <br>
+  <br>
+  <form action="{% url 'movies:delete' movie.pk %}" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">DELETE</button>
+  </form>
+  <br>
+  <a href="{% url 'movies:index' %}" class="btn btn-light">HOME</a>
+
+  
+{% endblock content %}

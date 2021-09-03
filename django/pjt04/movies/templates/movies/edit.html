@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="text-center">EDIT</h1>
+  <br>
+  <hr>
+  <form action="{% url 'movies:update' movie.pk %}" method='POST'>
+    {% csrf_token %}
+    <label for="title">TITLE: </label>
+    <input id="title" type="text" name="title" value="{{ movie.title }}">
+    <br>
+    
+    <label for="overview">OVERVIEW: </label>
+    <textarea name="overview" id="overview" cols="30" rows="10">{{ movie.overview }}</textarea>
+    <br>
+    
+    <label for="poster_path">POSTER PATH: </label>
+    <input id="poster_path" type="text" name="poster_path" value="{{ movie.poster_path }}">
+    <br>
+
+    <input type="submit" value="수정">
+  </form>
+
+{% endblock content %}

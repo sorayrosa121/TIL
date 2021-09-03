@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">INDEX</h1>
+  <br>
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="{% url 'movies:new' %}" class="btn btn-info text-white justify-text-end">NEW</a>
+  </div>
+  
+
+  <hr>
+  {% for movie in movies %}
+    <h2>
+      {% comment %} 영화제목(movie.title)을 클릭하는 경우, 반복문 속 해당 movie의 pk를 갖는, 이름이 movies인 앱의 detail url로 {% endcomment %}
+      <a href="{% url 'movies:detail' movie.pk %} " class="text-decoration-none">{{movie.title}}</a>
+    </h2>
+    <br>
+    <p>{{movie.overview}}</p>
+    <p>{{movie.poster_path}}</p>
+    <hr>
+  {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="text-center">NEW</h1>
+  <br>
+  <hr>
+  <form action="{% url 'movies:create' %}" method='POST'>
+    {% csrf_token %}
+    <label for="title">TITLE: </label>
+    <input id="title" type="text" name="title">
+    <br>
+    
+    <label for="overview">OVERVIEW: </label>
+    <textarea name="overview" id="overview" cols="30" rows="10"></textarea>
+    <br>
+    
+    <label for="poster_path">POSTER PATH: </label>
+    <input id="poster_path" type="text" name="poster_path">
+    <br>
+    
+    <br>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <input type="submit" class="btn btn-info text-white" value="CREATE">
+    </div>
+    
+  </form>
+
+{% endblock content %}
