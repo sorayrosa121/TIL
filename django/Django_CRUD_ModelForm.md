@@ -217,7 +217,7 @@ TEMPLATES = [
 
 ## 01. Read
 
-![image-20210907163819286](0907_workshop.assets/image-20210907163819286.png)
+![image-20210907163819286](django.assets/image-20210907163819286.png)
 
 <br>
 
@@ -243,7 +243,7 @@ TEMPLATES = [
 
 ## 02. Create
 
-![image-20210907164336648](0907_workshop.assets/image-20210907164336648.png)
+![image-20210907164336648](django.assets/image-20210907164336648.png)
 
 <br>
 
@@ -269,7 +269,7 @@ TEMPLATES = [
 
 ## 03. Detail
 
-![image-20210907164503741](0907_workshop.assets/image-20210907164503741.png)
+![image-20210907164503741](django.assets/image-20210907164503741.png)
 
 <br>
 
@@ -303,7 +303,7 @@ TEMPLATES = [
 
 ## 04. Update
 
-![image-20210907164848784](0907_workshop.assets/image-20210907164848784.png)
+![image-20210907164848784](django.assets/image-20210907164848784.png)
 
 <br>
 
@@ -328,13 +328,13 @@ TEMPLATES = [
 
 ## 05. Read
 
-![image-20210907164955332](0907_workshop.assets/image-20210907164955332.png)
+![image-20210907164955332](django.assets/image-20210907164955332.png)
 
 <br>
 
 ## 06. Delete
 
-![image-20210907181753668](0907_workshop.assets/image-20210907181753668.png)
+![image-20210907181753668](django.assets/image-20210907181753668.png)
 
 <br>
 
