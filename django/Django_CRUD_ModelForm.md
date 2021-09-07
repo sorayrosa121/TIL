@@ -38,9 +38,10 @@ urlpatterns = [
     path('<int:pk>/delete/', views.delete, name='delete'),        
 ]
 ```
-
 <br>
+
 ## 02. MODEL
+
 ```python
 # articles/models.py
 
@@ -60,6 +61,7 @@ class Article(models.Model):
 <br>
 
 ## 03. FORM
+
 ```python
 # articles/forms.py
 
@@ -77,7 +79,9 @@ class ArticleForm(forms.ModelForm):
 ```
 
 <br>
+
 ## 04. VIEW
+
 ```python
 # articles/views.py
 
@@ -152,6 +156,7 @@ def delete(request, pk):
 <br>
 
 ## 05. TEMPLATE
+
 ```django
 <!-- templates/base.html -->
 
@@ -175,6 +180,7 @@ def delete(request, pk):
 </body>
 </html>
 ```
+
 - Bootstrap CDN 추가
 
 <br>
@@ -206,11 +212,15 @@ TEMPLATES = [
 
 
 # 결과물
+
 <br>
 
 ## 01. Read
+
 ![image-20210907163819286](0907_workshop.assets/image-20210907163819286.png)
+
 <br>
+
 ```django
 <!-- articles/templates/articles/index.html -->
 
@@ -228,10 +238,13 @@ TEMPLATES = [
     {% endfor %}
 {% endblock content %}
 ```
+
 <br>
+
 ## 02. Create
 
 ![image-20210907164336648](0907_workshop.assets/image-20210907164336648.png)
+
 <br>
 
 ```django
@@ -257,6 +270,7 @@ TEMPLATES = [
 ## 03. Detail
 
 ![image-20210907164503741](0907_workshop.assets/image-20210907164503741.png)
+
 <br>
 
 ```django
@@ -290,6 +304,7 @@ TEMPLATES = [
 ## 04. Update
 
 ![image-20210907164848784](0907_workshop.assets/image-20210907164848784.png)
+
 <br>
 
 ```django
@@ -312,7 +327,9 @@ TEMPLATES = [
 <br>
 
 ## 05. Read
+
 ![image-20210907164955332](0907_workshop.assets/image-20210907164955332.png)
+
 <br>
 
 ## 06. Delete
