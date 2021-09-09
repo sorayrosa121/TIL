@@ -1,0 +1,25 @@
+<!-- articles/templates/articles/detail.html -->
+
+{% extends 'base.html' %}
+
+{% load bootstrap5 %}
+
+{% block content %}
+    <h1 class="fw-bold">DETAIL</h1>
+    <hr>
+    <h3>제목: {{ article.title }}</h3>
+    <p>내용: {{ article.content }} </p>
+    {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}">
+        <br>
+        <br>
+    {% endif %}
+    <p>작성시각 : {{ article.created_at|date:"Y년 M j일 h:i A" }}</p>
+    <p>수정시각 : {{ article.updated_at|date:"Y년 M j일 h:i A" }}</p>
+    <hr>
+
+    <a class="btn btn-primary" href="{% url 'articles:update' article.pk %}">UPDATE</a>
+    <a class="btn btn-danger" href="{% url 'articles:delete' article.pk %}">DELETE</a>
+    <br>
+    <a class="text-decoration-none" href="{% url 'articles:index' %}">[BACK]</a>
+{% endblock content %}
