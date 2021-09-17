@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h1>DETAIL</h1>
+  <h2>단일 리뷰 상세 조회</h2>
+  <hr>
+  
+  <h3>글 번호: {{ review.pk }}</h3>
+  <h3>영화 제목: {{ review.movie_title }}</h3>
+  <p>리뷰 제목: {{review.title}}</p>
+  <p>리뷰 내용: {{review.content}}</p>
+  <p>리뷰 평점: {{review.rank}}</p>
+
+  <a href="{% url 'community:update' review.pk %}" class="btn btn-primary">EDIT</a>
+  <a href="{% url 'community:index' %}" class="btn btn-secondary">CANCEL</a>
+  <form action="{% url 'community:delete' review.pk %}" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-danger">DELETE</button>  
+  </form>
+
+{% endblock content %}

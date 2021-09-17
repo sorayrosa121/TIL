@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h1>INDEX</h1>
+  <h2>전체 리뷰 조회</h2>
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'community:create' %}" class="btn btn-primary">리뷰 작성</a>
+  {% else %}
+    <a href="{% url 'community:create' %}" class="btn btn-primary">새 리뷰를 작성하려면 로그인 하세요</a>
+  {% endif %}
+  
+  <hr>
+  
+  {% for review in reviews %}
+    <p>글 번호: {{ review.pk }}</p>
+    <p>영화 제목: {{ review.movie_title }}</p>
+    <p>리뷰 제목: <a href="{% url 'community:detail' review.pk %}" class="fw-bold text-primary text-decoration-none">{{review.title}}</a>
+    </p>
+    <p>리뷰 평점: {{review.rank}}</p>
+    <hr>
+  {% endfor %}
+  
+
+{% endblock content %}

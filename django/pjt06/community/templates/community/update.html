@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+  <h1>UPDATE</h1>
+  <h2>기존 리뷰 수정</h2>
+  
+  <form action="{% url 'community:update' review.pk %}" method="POST">
+    {% csrf_token %}
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    {% bootstrap_form form %}
+    <button class="btn btn-info">수정</button>
+  </form>
+  
+{% endblock content %}
